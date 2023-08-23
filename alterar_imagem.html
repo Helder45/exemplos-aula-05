@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Imagem</title>
+</head>
+<body>
+
+    <button id="btn">Trocar Imagem</button>
+    <img src="imagem1.jpeg" alt="Imagem 1" id="imagem1" style="display: none;">
+    <img src="imagem2.jpeg" alt="Imagem 2" id="imagem2" style="display: none;">
+
+    <script>
+
+        const btn = document.getElementById("btn");
+        const imagem1 = document.getElementById("imagem1");
+        const imagem2 = document.getElementById("imagem2");
+        let exibindoImagem1 = true;
+
+        btn.addEventListener("click", () => {
+            if (exibindoImagem1) {
+                imagem1.style.display = "block";
+                imagem2.style.display = "none";
+
+            } else {
+
+                imagem1.style.display = "none";
+                imagem2.style.display = "block";
+
+            }
+
+            exibindoImagem1 = !exibindoImagem1;
+
+        });
+
+    </script>
+    
+    
+</body>
+</html>
